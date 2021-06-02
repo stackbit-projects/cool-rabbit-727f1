@@ -1,0 +1,66 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - _pages/404.md
+      - _pages/about.md
+      - _pages/contact.md
+      - _posts/2016-04-07-documentation.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: description
+        label: Description
+      - type: image
+        name: img
+        label: Img
+      - type: number
+        name: color
+        label: Color
+        subtype: int
+      - type: string
+        name: author
+        label: Author
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    exclude:
+      - 2016-04-07-documentation.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: string
+        name: categories
+        label: Categories
+      - type: image
+        name: img
+        label: Img
+      - type: string
+        name: color
+        label: Color
+      - type: string
+        name: author
+        label: Author
